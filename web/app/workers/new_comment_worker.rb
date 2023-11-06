@@ -4,7 +4,7 @@ class NewCommentWorker
   def perform(post_title, comment_id)
     puts "===================="
     puts "Start of job: #{jid}"
-    puts "Doing hard work that takes 2 seconds to finish"
+    puts "Doing hard work that takes 5 seconds to finish"
     puts "Título do post: #{post_title}"
     puts "===================="
     sleep 5
