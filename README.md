@@ -35,6 +35,15 @@ Após clonar o repositório, basta executar o comando:
 
 ```bash
 docker-compose build
+docker-compose run web bash
+bundle install
+rails db:migrate
+yarn install
+exit
+
+docker-compose run client bash
+yarn install
+exit
 ```
 
 Após a criação dos containers, basta executar o comando:
@@ -42,6 +51,7 @@ Após a criação dos containers, basta executar o comando:
 ```bash
 docker-compose up
 ```
+
 
 A aplicação Rails estará disponível em http://localhost:3000
 O client em Vue estará disponível em http://localhost:8080
