@@ -75,7 +75,7 @@ O monitor de filas do Redis (RedisInsight) estará disponível em http://localho
 - destroy post:
 	- http://localhost:3000/posts/3 (DELETE) - 204 - none
 - show post:
-- http://localhost:3000/posts/2 - post with id
+	- http://localhost:3000/posts/2 - post with id
 - create comments:
 	- http://localhost:3000/posts/1/comments - (POST + payload) - comment detail
 - edit comments:
