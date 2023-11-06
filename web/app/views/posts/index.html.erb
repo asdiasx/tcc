@@ -1,0 +1,27 @@
+<div class="container px-2">
+  <% if flash[:notice] %>
+    <div class="alert alert-warning" role="alert">
+      <%= notice %>
+    </div>
+    <% end %>
+      <div class="row d-flex justify-content-between mx-0">
+        <h1 class="col mb-2 px-0">Posts</h1>
+        <%= link_to "New post" ,new_post_path, class:"col-1 btn btn-primary btn-sm mt-2 mb-1", style:"width: 7rem;
+          height:35px;" %>
+      </div>
+      <% if @posts.length> 0 %>
+        <div id="posts">
+          <% @posts.each do |post| %>
+            <div class="container px-0">
+              <div class="card mb-2">
+                <div class="card-body px-3 pb-2">
+                  <%= render post, { context: 'index' } %>
+                </div>
+              </div>
+            </div>
+            <% end %>
+        </div>
+        <% else %>
+          <p class="text-muted mt-5">No posts found, click "New post" button to create a post</p>
+          <% end %>
+</div>

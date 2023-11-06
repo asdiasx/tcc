@@ -1,0 +1,13 @@
+<div>
+  Hello World!
+</div>
+<% if notice.present? %>
+<p style="color: green"><%= notice %></p>
+<% end %>
+<div>
+  <% @topics.each do |t| %>
+    <%# <%= render t, locals:{topic: t}%>
+    <%= render t %>
+    <p><%= link_to "Show", t %></p>
+  <% end %>
+</div>

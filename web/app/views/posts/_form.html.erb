@@ -1,0 +1,35 @@
+<div class="container px-0">
+  <%= form_with(model: post) do |form| %>
+    <% if post.errors.any? %>
+      <div style="color: red">
+        <h2>
+          <%= pluralize(post.errors.count, "error" ) %> prohibited this post from being saved:
+        </h2>
+        <ul>
+          <% post.errors.each do |error| %>
+            <li>
+              <%= error.full_message %>
+            </li>
+            <% end %>
+        </ul>
+      </div>
+      <% end %>
+        <div class="mb-3">
+          <%= form.label :title, class:"form-label" %>
+            <%= form.text_field :title, class:"form-control" %>
+        </div>
+        <div>
+          <%= form.label :body, class:"form-label" %>
+            <%= form.text_area :body, class:"form-control" %>
+        </div>
+        <div class="row d-flex mx-0 mt-2 mb-0 pt-2 border-top border-3">
+          <div class="col-12 col-md-2 me-2 mt-1 ps-0">
+            <%= form.submit "Save" , {class:"btn btn-secondary btn-sm", style:"width: 7rem; height:35px;"} %>
+          </div>
+          <div class="col-12 col-md-2 mt-1 ps-0">
+            <%= link_to "Back to posts" , posts_path, class: "btn btn-danger btn-sm" , style:"width: 7rem; height:35px;"
+              %>
+          </div>
+        </div>
+        <% end %>
+</div>

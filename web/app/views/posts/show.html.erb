@@ -1,0 +1,44 @@
+<div class="container px-2">
+  <% if flash[:notice] %>
+    <div class="alert alert-warning" role="alert">
+      <%= notice %>
+    </div>
+    <% end %>
+      <div class="row mx-0">
+        <h1 class="col mb-2 d-flex justify-content-between px-0">Post Details</h1>
+        <div class="col-7 custom-right-align d-flex justify-content-end mx-0 px-0">
+          <%= link_to "Add comment" , new_post_comment_path(post_id: @post.id), {
+            class: "btn btn-primary btn-sm me-2 mt-2 mb-1" , style:"width: 7rem; height:35px;"} %>
+
+            <%= link_to "Back to posts" , posts_path, class: "btn btn-primary btn-sm mt-2 mb-1" , style:"width: 7rem;
+              height:35px;" %>
+        </div>
+      </div>
+
+      <div class="container px-0">
+        <div class="card mb-2">
+          <div class="card-body px-3">
+            <%= render @post, { context: 'show' } %>
+          </div>
+        </div>
+      </div>
+
+      <% if @post.comments.length> 0 %>
+        <div class="row d-flex justify-content-between mx-0">
+          <h2 class="col mb-2 px-0">Comments</h2>
+        </div>
+        <div id="comments">
+          <% @post.comments.each do |comment| %>
+            <div class="container px-0">
+              <div class="card mb-2">
+                <div class="card-body px-0 py-0">
+                  <%= render comment %>
+                </div>
+              </div>
+            </div>
+            <% end %>
+        </div>
+        <% end %>
+
+
+</div>

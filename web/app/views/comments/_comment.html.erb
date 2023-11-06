@@ -1,0 +1,24 @@
+<div class="container px-0">
+  <div id="<%= dom_id comment %>">
+    <div class="card-body">
+      <h5 class="card-title bottom-border border-3 pb-2">
+        Id: <%= comment.id %>
+      </h5>
+      <div class="row">
+        <div class="col">
+          <pre class="card-text"><%= comment.body %></pre>
+          <div class="row d-flex mx-0 mt-2 mb-0 pt-2 px-0 border-top border-3">
+            <div class="col-12 col-md-2 me-2 ps-0">
+              <%= link_to "Edit" , edit_post_comment_path(comment.post, comment),
+                class: "btn btn-secondary btn-sm" , style:"width: 7rem; height:35px;" %>
+            </div>
+            <div class="col-12 col-md-2 ps-0">
+              <%= button_to "Destroy" , post_comment_path(comment.post,comment), method: :delete,
+                class: "btn btn-danger btn-sm" , style:"width: 7rem; height:35px;" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

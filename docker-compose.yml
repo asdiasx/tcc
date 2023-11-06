@@ -1,0 +1,41 @@
+version: '3.3'
+services:
+  web:
+    build: .
+    container_name: tcc-web
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./web:/usr/src/peeper
+      - bundle:/usr/local/bundle
+    command: ./bin/rails-entrypoint.sh
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile.ts
+    container_name: tcc-client
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./client:/usr/src/client
+    command: yarn dev
+  redis:
+    image: redis:alpine
+    container_name: tcc-redis
+    ports:
+      - '6379:6379'
+    environment:
+      REDIS_URL: 'redis://redis:6379/0'
+    volumes:
+      - redis:/data
+  redisinsight:
+    image: redislabs/redisinsight
+    container_name: tcc-redis-insight
+    ports:
+      - '8001:8001'
+    volumes:
+      - redisinsight:/db
+volumes:
+  bundle:
+  redis:
+  redisinsight:

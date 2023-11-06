@@ -1,0 +1,40 @@
+@import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: #ddd;
+}
+
+main {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.bottom-border {
+    border-bottom: 1px solid #ddd; 
+  }
+
+.fa-pen-to-square {
+    color: #0d6efd;
+    cursor: pointer;
+}
+
+.fa-trash-can {
+    color: #dc3545;
+    cursor: pointer;
+}
+
+.btn-style {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 35px;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}

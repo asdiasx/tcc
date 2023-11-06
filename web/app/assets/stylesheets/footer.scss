@@ -1,0 +1,13 @@
+.bottom {
+    margin-top: auto;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.centered {
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
