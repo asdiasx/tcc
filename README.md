@@ -15,7 +15,7 @@ Trata-se de um sistema de postagens de artigos, onde o usuário pode criar, edit
 
 Devido ao curto espaço de tempo, não foi implementado um sistema de autenticação, sendo assim, qualquer usuário pode criar, editar e excluir artigos e comentários.
 
-Com foco didático, o projeto foi dividido em duas partes, uma API (Web) e um cliente (Web), demonstrando as possibilidades de implementação.
+Com foco didático, o projeto foi dividido em duas partes, um "monolito" Rails e o uso back como API para um cliente (Vue), demonstrando as possibilidades de implementação.
 
 ### Bonus
 
