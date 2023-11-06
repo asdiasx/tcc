@@ -21,11 +21,11 @@ Com foco didático, o projeto foi dividido em duas partes, uma API (Web) e um cl
 
 Aproveitei o projeto para explorar um pouco mais o conhecimento de uma tecnologia utilizada na squad em que atuo e que gostaria de entender melhor o funcionamento: *Processamento de Background Jobs com Redis e Sidekiq*.
 
-Utilizei essa tecnologia para simular a execução de tarefas complexas/demoradas que seriam executadas em backgroud, liberando as interações com o usuário. A resposta dessas tarefas é disponibilizada em uma página separada (Notifications) para fins de demosntração.
+Utilizei essa tecnologia para simular a execução de tarefas complexas/demoradas que seriam executadas em backgroud, liberando as interações com o usuário. A resposta dessas tarefas é disponibilizada em uma página separada (Notifications) para fins de demonstração.
 
-Assim,  aproveitei o aprendizado de uso do Doker Compose, para adicionar um container para o Redis e outro para uma ferramenta interessante de visualização de filas do **Redis**, o **RedisInsight**.
+Assim,  utilizando o aprendizado de uso do Doker Compose, adicionei um container para o Redis e outro para uma ferramenta interessante de visualização de filas do **Redis**, o **RedisInsight**.
 
-Ao longo do desenvolvimento, esbarrei com algumas necessidades que possiblitaram ainda mais o aprendizado, como por exemplo, a necessidade de subir o servidor Sidekiq junto com a aplicação, para que as tarefas fossem executadas. Para isso, descobri o uso da gem **foreman**, que possibilita a execução de vários processos em um único terminal.
+Ao longo do desenvolvimento, esbarrei com algumas necessidades que possiblitaram ainda mais o aprendizado, como por exemplo, a necessidade de subir o servidor Sidekiq junto com a aplicação, para que as tarefas fossem executadas. Para isso, descobri a gem **foreman**, que possibilita a execução de vários processos em um único terminal.
 
 ## Instalação
 
