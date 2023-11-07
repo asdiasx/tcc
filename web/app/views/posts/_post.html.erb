@@ -12,10 +12,10 @@
 <% if context=='index' %>
     <div class="row d-flex mx-0 mt-2 mb-0 pt-2 border-top border-3">
         <div class="col-12 col-md-2 me-2 ps-0">
-            <%= link_to "Edit" ,edit_post_path(post), class: "btn btn-secondary btn-sm", style:"width: 7rem; height:35px;" %>
+            <%= link_to "Edit" ,edit_post_path(post), class: "btn btn-secondary btn-sm mb-1", style:"width: 7rem; height:35px;" %>
         </div>
         <div class="col-12 col-md-2 ps-0">
-            <%= button_to "Destroy" , post, method: :delete, class: "btn btn-danger btn-sm", style:"width: 7rem; height:35px;" %>
+            <%= button_to "Destroy" , post, method: :delete, class: "btn btn-danger btn-sm mb-1", style:"width: 7rem; height:35px;" %>
         </div>
     </div>
 <% end %>
